@@ -1,5 +1,7 @@
 <?php
 
+require 'library/Core/autoload.php';
+
 return [
     'paths'         => [
         'migrations' => getenv('PHINX_CONFIG_DIR') . 'storage/db/migrations',

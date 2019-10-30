@@ -7,9 +7,9 @@ jobs:
     env:
       DB_ADAPTER: mysql
       DB_HOST: 127.0.0.1
-      DB_NAME: phalcon
+      DB_NAME: phalcon-api
       DB_USERNAME: root
-      DB_PASSWORD: password
+      DB_PASSWORD: secret
       CODECEPTION_URL: 127.0.0.1
       CODECEPTION_PORT: 8888
     services:
@@ -17,8 +17,8 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: false
-          MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: phalcon
+          MYSQL_ROOT_PASSWORD: secret
+          MYSQL_DATABASE: phalcon-api
         ports:
           - 3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
